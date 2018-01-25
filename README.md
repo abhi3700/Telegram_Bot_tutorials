@@ -3,7 +3,7 @@ Learn how to make a telegram bot from basics to sample bots
 
 ## Programming
 * Python-telegram-bot - [Github](https://github.com/python-telegram-bot/python-telegram-bot)
-* PyTelegramBotAPI - [](https://github.com/eternnoir/pyTelegramBotAPI)
+* PyTelegramBotAPI - [Github](https://github.com/eternnoir/pyTelegramBotAPI)
 
 ## Resources
 * Bots: An introduction for developers - https://core.telegram.org/bots
