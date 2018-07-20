@@ -15,3 +15,4 @@ Learn how to make a telegram bot from basics to sample bots
 ## Bots
 * Weather Bot using JS - https://www.3scale.net/2016/02/create-a-weather-bot-for-telegram/
 * Bot with Amazon AWS cloud - https://lesterchan.net/blog/2016/03/11/telegram-bot-using-aws-api-gateway-and-aws-lambda/
+* Bot with GAE - https://github.com/FollonSaxBass/python-telegram-bot-GAE
