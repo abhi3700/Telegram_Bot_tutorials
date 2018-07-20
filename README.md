@@ -10,3 +10,6 @@ Learn how to make a telegram bot from basics to sample bots
 * Telegram Bot API - https://core.telegram.org/bots/api
 * Sample examples -  https://core.telegram.org/bots/samples#python
 * Bot with Google App Engine (GAP) - https://github.com/yukuku/telebot
+
+## Bots
+* Weather Bot using JS - https://www.3scale.net/2016/02/create-a-weather-bot-for-telegram/
