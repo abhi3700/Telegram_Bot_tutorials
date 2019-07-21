@@ -1,6 +1,14 @@
 # Telegram_Bot_tutorials
 Learn how to make a telegram bot from basics to sample bots
 
+## Bot Types in Telegram
+* __Normal:__
+  - It can be added to a group for multiple people to access at a time.
+* __Inline:__
+  - No need to add into any group
+  - Access via `@bot1` in the message box
+
+
 ## Programming
 * Python-telegram-bot - [Github](https://github.com/python-telegram-bot/python-telegram-bot)
 * PyTelegramBotAPI - [Github](https://github.com/eternnoir/pyTelegramBotAPI)
