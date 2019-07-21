@@ -8,8 +8,7 @@ Learn how to make a telegram bot from basics to sample bots
   - No need to add into any group
   - Access via `@bot1` in the message box
 
-
-## Programming
+## Programming (Python) API
 * Python-telegram-bot - [Github](https://github.com/python-telegram-bot/python-telegram-bot)
 * PyTelegramBotAPI - [Github](https://github.com/eternnoir/pyTelegramBotAPI)
 
@@ -18,7 +17,12 @@ Learn how to make a telegram bot from basics to sample bots
 * Telegram Bot API - https://core.telegram.org/bots/api
 * Sample examples -  https://core.telegram.org/bots/samples#python
 * How to create a Telegram Bot with Node.js - https://www.youtube.com/watch?v=Te7HcRhwOI4
+* Botogram (Python framework for Telegram bots) - https://botogram.dev/
+
+## Github Repositories
 * Bot with Google App Engine (GAP) - https://github.com/yukuku/telebot
+* Collection great groups, channels, bots and libraries for Telegram - https://github.com/ebertti/awesome-telegram
+* Collection of Bots - https://github.com/DenisIzmaylov/awesome-telegram-bots
 
 ## Bots
 * Weather Bot using JS - https://www.3scale.net/2016/02/create-a-weather-bot-for-telegram/
