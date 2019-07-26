@@ -1,6 +1,5 @@
 import botogram
-
-API_key = "885410871:AAHb_lwnzFQ2jci_6W_NVgJSUSAUQN_skns"
+from input import *
 
 bot = botogram.create(API_key)    
 
