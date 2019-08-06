@@ -32,6 +32,7 @@ Learn how to make a telegram bot from basics to sample bots
   - https://github.com/FollonSaxBass/python-telegram-bot-GAE
   - https://github.com/yukuku/telebot
   - https://github.com/livz/LizBot
+* [Article by a Toptal Engineer](https://www.toptal.com/python/telegram-bot-tutorial-python)
 
 * ### TODO:
   - `Birthday_bot`: reminds other users (in a group) about the Birthday boy/girl.
