@@ -16,6 +16,7 @@ Windows 10
 
 ## App
 * create a new App using Heroku dashboard [RECOMMENDED]. Or else, one can create App via CLI. Go to the last part in [this](https://devcenter.heroku.com/articles/heroku-cli#getting-started)
+> NOTE: Keep the App name same as the repo (git, heroku)
 * __Procfile__: Heroku apps include a Procfile that specifies the commands that are executed by the app on startup.
 > Note:  `Procfile.txt` is not valid.
 * Including a `requirements.txt` in the root directory is one way for Heroku to recognize your Python app.

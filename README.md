@@ -11,7 +11,8 @@ Learn how to make a telegram bot from basics to sample bots
 ## Programming (Python) API
 * Python-telegram-bot - [Github](https://github.com/python-telegram-bot/python-telegram-bot)
 * PyTelegramBotAPI - [Github](https://github.com/eternnoir/pyTelegramBotAPI)
-* Botogram (Python framework for Telegram bots) - [Github](https://botogram.dev/)
+* Botogram (Python framework for Telegram bots) - [Github](https://botogram.dev/), [Telegram API wrapper](https://botogram.dev/docs/0.6/api/telegram/), [Bots Creation API](https://botogram.dev/docs/0.6/api/bot/)
+	> NOTE: Look for latest version
 * Telepot - https://telepot.readthedocs.io/en/latest/
 
 ## Learning Resources
