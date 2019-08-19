@@ -29,3 +29,32 @@ requests
 	- After creating app, copy the link `Heroku Git URL` from App's settings page.
 	- Run `$ git remote add heroku <heroku-git-url>` from inside the Bot repo.
 	- After commits, run `$ git push heroku master` to push the repo into the heroku server.
+
+## Redis Database
+* Add `Heroku Redis` as addon in an App. For more, click [here](https://devcenter.heroku.com/articles/heroku-redis)
+* Check if a Redis instance is provisioned in your App. For more, click [here](https://devcenter.heroku.com/articles/heroku-redis#check-if-a-redis-instance-is-already-provisioned)
+	- If installed in App:
+		```console
+		abhijit@Abhijit MINGW64 /i/heroku_repos/keyhubbot (master)
+		$ heroku addons | grep heroku-redis
+		heroku-redis (redis-aerodynamic-59195)  hobby-dev  free   created
+		```
+	- If not installed in App:
+		```console
+		abhijit@Abhijit MINGW64 /i/heroku_repos/leolabbot (master)
+		$ heroku addons | grep heroku-redis		
+		```
+* Capture `REDIS_URL` by following this:
+```console
+abhijit@Abhijit MINGW64 /i/heroku_repos/keyhubbot (master)
+$ heroku config | grep REDIS
+REDIS_URL: redis://h:p478e373c898b3eb564e2a14303db09c415cfcacffa638404d3378e2ffb@ec2-3-222-131-127.compute-1.amazonaws.com:13819
+```
+* Implement in the code by following [here](https://devcenter.heroku.com/articles/heroku-redis#connecting-in-python)
+	1. First install this package using `pip install redis`
+```py
+import os
+import redis
+REDIS_URL = "redis://h:p478e373c898b3eb564e2a14303db09c415cfcacffa638404d3378e2ffb@ec2-3-222-131-127.compute-1.amazonaws.com:13819"
+r = redis.from_url(os.environ.get(REDIS_URL))
+```
