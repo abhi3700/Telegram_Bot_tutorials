@@ -89,14 +89,17 @@ REDIS_URL:    redis://h:pd4a2fa90f5a63058400930ffd21f5864312b2a174061846e13543a7
 ```
 
 ## Testing 
-* M-1: Local PC [SLOWEST speed]
+* M-1: Local PC [SLOWEST speed for testing]
 	- Use `python app/bot.py` command in terminal
+	- Get to see the errors (if any), not available on any of other methods.
 * M-2: Local PC
 	- Use `heroku local` command in terminal
-* M-3: Run in Heroku console
-	- App's Overview >> More >> "Run in Console"
+* M-3: Run in Heroku console [FASTEST speed for testing]
+	- App's Overview >> More >> "Run Console"
 	- Use `python app/bot.py` in heroku console.
-* M-4: Dyno [FASTEST speed]
+	- Get to see the errors (if any), not available on any of other methods.
+	- `Process exited` must appear after pressing <kbd>ctrl+c</kbd> command. Otherwise, an instance of the bot will be running in background.
+* M-4: Dyno [FASTEST speed for production]
 	- Turn `ON` the Dyno in the App's Overview Screen
 
 ## Troubleshooting
