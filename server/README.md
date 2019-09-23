@@ -91,7 +91,6 @@ REDIS_URL:    redis://h:pd4a2fa90f5a63058400930ffd21f5864312b2a174061846e13543a7
 ## Testing 
 * M-1: Local PC [SLOWEST speed for testing]
 	- Use `python app/bot.py` command in terminal
-	- Get to see the errors (if any), not available on any of other methods.
 	- Testing on Phone, Desktop
 * M-2: Local PC
 	- Use `heroku local` command in terminal
