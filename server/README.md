@@ -88,6 +88,10 @@ DATABASE_URL: postgres://sncwwevyyzviez:7569a516be40f3f5d62f6d6a8818556771c5f1ad
 REDIS_URL:    redis://h:pd4a2fa90f5a63058400930ffd21f5864312b2a174061846e13543a79eb1fdd81@ec2-54-77-8-133.eu-west-1.compute.amazonaws.com:18179
 ```
 
+### Config Vars
+* __M-1:__ App >> Settings >> Config Vars >> <kbd>Reveal Config Vars</kbd> 
+* __M-2:__ `$ heroku config` in the App's root directory.
+
 ## Testing 
 * M-1: Local PC [SLOWEST speed for testing]
 	- Use `python app/bot.py` command in terminal
