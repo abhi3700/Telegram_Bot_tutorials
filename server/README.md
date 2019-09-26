@@ -95,8 +95,8 @@ REDIS_URL:    redis://h:pd4a2fa90f5a63058400930ffd21f5864312b2a174061846e13543a7
 ```
 
 ### Config Vars
-* __M-1:__ App >> Settings >> Config Vars >> <kbd>Reveal Config Vars</kbd> 
-* __M-2:__ `$ heroku config` in the App's root directory.
+* __M-1:__ App >> Settings >> Config Vars >> <kbd>Reveal Config Vars</kbd>. This is when the github repo is linked with Heroku and auto deployed whenever pushed to Github.
+* __M-2:__ `$ heroku config` in the App's root directory. This works when the github repo & heroku repo are separately pushed.
 
 ## Testing 
 * M-1: Local PC [SLOWEST speed for testing]
