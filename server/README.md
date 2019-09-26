@@ -47,6 +47,12 @@ requests
 	- Run `$ git remote add heroku <heroku-git-url>` from inside the Bot repo.
 	- After commits, run `$ git push heroku master` to push the repo into the heroku server.
 
+## Activity
+* following activities are shown
+	- database revoking
+	- deploy (during `git push`)
+* see the comparison b/w last & latest deploy just by clicking the commit hyperlink in Heroku App screen >> Activity tab
+
 ## Database
 ### Redis Database
 * Add `Heroku Redis` as addon in an App. For more, click [here](https://devcenter.heroku.com/articles/heroku-redis)
