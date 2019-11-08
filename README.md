@@ -8,6 +8,13 @@ Learn how to make a telegram bot from basics to sample bots
   - No need to add into any group
   - Access via `@bot1` in the message box
 
+## Bot features
+* [x] Add inline keyboards: contact, location, custom
+* [x] Add buttons
+* [x] Attach to Database
+* [ ] Add to a group
+* [ ] Verify a bot/human: by sending direct message to that user & check for clicking a button 
+
 ## Programming (Python) API
 * Python-telegram-bot - [Github](https://github.com/python-telegram-bot/python-telegram-bot)
 * PyTelegramBotAPI - [Github](https://github.com/eternnoir/pyTelegramBotAPI)
@@ -45,5 +52,8 @@ Learn how to make a telegram bot from basics to sample bots
 * [Article by a Toptal Engineer](https://www.toptal.com/python/telegram-bot-tutorial-python)
 
 * ### TODO:
+  - `Quiz Bot`
+    + owner can add set of quiz Q&A
+    + pay the subscription & make it available for users
   - `Birthday_bot`: reminds other users (in a group) about the Birthday boy/girl.
   - `Weather_bot`: gives alert about weather of a place (given by user).
