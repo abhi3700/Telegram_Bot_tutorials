@@ -13,7 +13,8 @@ Learn how to make a telegram bot from basics to sample bots
 * [x] Add buttons
 * [x] Attach to Database
 * [ ] Add to a group
-* [ ] Verify a bot/human: by sending direct message to that user & check for clicking a button 
+* [ ] Verify a bot/human: by sending direct message to that user & check for clicking a button
+* [ ] Create a UI with back button, options like an App
 
 ## Programming (Python) API
 * Python-telegram-bot - [Github](https://github.com/python-telegram-bot/python-telegram-bot)
