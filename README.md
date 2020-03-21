@@ -8,7 +8,7 @@ Learn how to make a telegram bot from basics to sample bots
   - No need to add into any group
   - Access via `@bot1` in the message box
 
-## Bot features
+## Bot features (using Python)
 * [x] Add inline keyboards: contact, location, custom
 * [x] Add buttons
 * [x] Attach to Database
@@ -17,6 +17,7 @@ Learn how to make a telegram bot from basics to sample bots
 * [ ] Create a UI with back button, options like an App
 
 ## Programming (Python) API
+### Python
 * Python-telegram-bot - [Github](https://github.com/python-telegram-bot/python-telegram-bot)
 * PyTelegramBotAPI - [Github](https://github.com/eternnoir/pyTelegramBotAPI)
 * Botogram (Python framework for Telegram bots) - [Github](https://botogram.dev/), [Telegram API wrapper](https://botogram.dev/docs/0.6/api/telegram/), [Bots Creation API](https://botogram.dev/docs/0.6/api/bot/)
@@ -31,6 +32,10 @@ Learn how to make a telegram bot from basics to sample bots
     + [WakeOnLAN](https://github.com/Steffo99/spegnimi-bot)
     + [ShortURLsBot](https://github.com/MarcoBuster/ShortURLsBot)
 * Telepot - https://telepot.readthedocs.io/en/latest/
+
+### C++
+* Telegram Bot API - https://github.com/desmoteo/telegram-bot-api
+* C++ lib for Bot - https://github.com/reo7sp/tgbot-cpp
 
 ## Learning Resources
 * Bots: An introduction for developers - https://core.telegram.org/bots
