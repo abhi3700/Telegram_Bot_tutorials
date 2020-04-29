@@ -16,8 +16,9 @@ Learn how to make a telegram bot from basics to sample bots
 * [ ] Verify a bot/human: by sending direct message to that user & check for clicking a button
 * [ ] Create a UI with back button, options like an App
 
-## Programming (Python) API
+## Programming
 ### Python
+* [my python tutorials](./tutorials-py)
 * Python-telegram-bot - [Github](https://github.com/python-telegram-bot/python-telegram-bot)
 * PyTelegramBotAPI - [Github](https://github.com/eternnoir/pyTelegramBotAPI)
 * Botogram (Python framework for Telegram bots) - [Github](https://botogram.dev/), [Telegram API wrapper](https://botogram.dev/docs/0.6/api/telegram/), [Bots Creation API](https://botogram.dev/docs/0.6/api/bot/)
@@ -34,13 +35,15 @@ Learn how to make a telegram bot from basics to sample bots
 * Telepot - https://telepot.readthedocs.io/en/latest/
 
 ### C++
-* Telegram Bot API - https://github.com/desmoteo/telegram-bot-api
+* [my cpp tutorials](./tutorials-cpp)
 * C++ lib for Bot - https://github.com/reo7sp/tgbot-cpp
+* Telegram Bot API - https://github.com/desmoteo/telegram-bot-api [DEPRECATED]
 
-## Learning Resources
+## Learning/Education
 * Bots: An introduction for developers - https://core.telegram.org/bots
 * Telegram Bot API - https://core.telegram.org/bots/api
 * Sample examples -  https://core.telegram.org/bots/samples#python
+* __THEORY__ - https://github.com/python-telegram-bot/python-telegram-bot/wiki
 * How to create a Telegram Bot with Node.js - https://www.youtube.com/watch?v=Te7HcRhwOI4
 
 ## Github Repositories
