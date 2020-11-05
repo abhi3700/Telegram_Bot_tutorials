@@ -66,3 +66,9 @@ Learn how to make a telegram bot from basics to sample bots
     + pay the subscription & make it available for users
   - `Birthday_bot`: reminds other users (in a group) about the Birthday boy/girl.
   - `Weather_bot`: gives alert about weather of a place (given by user).
+  - `Stock_bot`: gives all stock market info
+    + API: https://mboum.com/api/welcome
+    + Features inspiration: https://mboum.com/
+    + Earning: user subscription for 
+      - specific price value alert for a share. E.g. alert when share price of Google reaches 1000 USD.
+      - specific price of share daily e.g. Google, Uber, Amazon... 
