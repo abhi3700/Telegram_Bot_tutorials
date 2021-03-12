@@ -21,7 +21,7 @@ Learn how to make a telegram bot from basics to sample bots
 * [my python tutorials](./tutorials-py)
 * Python-telegram-bot - [Github](https://github.com/python-telegram-bot/python-telegram-bot)
 * PyTelegramBotAPI - [Github](https://github.com/eternnoir/pyTelegramBotAPI)
-* Botogram (Python framework for Telegram bots) - [Github](https://botogram.dev/), [Telegram API wrapper](https://botogram.dev/docs/0.6/api/telegram/), [Bots Creation API](https://botogram.dev/docs/0.6/api/bot/)
+* Botogram (Python framework for Telegram bots) - [Github](https://botogram.dev/), [Telegram API wrapper](https://botogram.dev/docs/0.6.1/api/telegram/), [Bots Creation API](https://botogram.dev/docs/0.6.1/api/bot/)
 	> NOTE: Look for latest version
 	- [Small example for botogram "normal" keyboards](https://gist.github.com/MarcoBuster/8f9e7661006436af39c797f02a3d48cc)
 	- [A very small script to send text or files over Telegram by using CLI](https://gist.github.com/MarcoBuster/8e4f6db4dc4ba5eb5640224b518d7c7e)
