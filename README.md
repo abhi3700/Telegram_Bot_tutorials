@@ -26,6 +26,7 @@ Learn how to make a telegram bot from basics to sample bots
 	- [Small example for botogram "normal" keyboards](https://gist.github.com/MarcoBuster/8f9e7661006436af39c797f02a3d48cc)
 	- [A very small script to send text or files over Telegram by using CLI](https://gist.github.com/MarcoBuster/8e4f6db4dc4ba5eb5640224b518d7c7e)
   - [Check if a user is member of channel](https://github.com/python-botogram/botogram/issues/145)
+  - [Get User's username in a chat with Telegram Bot](https://github.com/python-botogram/botogram/issues/137#)
   - Examples Bots (built on Botogram framework)
     + [botogramQBittorrent](https://github.com/ch3p4ll3/botogramQBittorrent)
     + [ban_binance_spamimages](https://github.com/ch3p4ll3/binanceban)
