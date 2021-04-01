@@ -33,7 +33,7 @@ Learn how to make a telegram bot from basics to sample bots
     + [Reminder Bot](https://github.com/Mamiglia/Reminder-Bot)
     + [WakeOnLAN](https://github.com/Steffo99/spegnimi-bot)
     + [ShortURLsBot](https://github.com/MarcoBuster/ShortURLsBot)
-* Telepot - https://telepot.readthedocs.io/en/latest/
+* [DEPRECATED] Telepot - https://telepot.readthedocs.io/en/latest/
 
 ### C++
 * [my cpp tutorials](./tutorials-cpp)
