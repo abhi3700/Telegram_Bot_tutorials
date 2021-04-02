@@ -20,7 +20,7 @@ bot = botogram.create(API_key)
 @bot.command("withdraw")
 def withdraw_command(chat, message, args):
     """Withdraw your EOSIO token from this bot to your EOSIO account"""
-    chat.send(f"arg0: {args[0]}\narg: {args[1]}\narg2: {args[2]}\n")
+    chat.send(f"arg0: {args[0]}\narg1: {args[1]}\narg2: {args[2]}\n")
 
 if __name__ == "__main__":
     bot.run()
