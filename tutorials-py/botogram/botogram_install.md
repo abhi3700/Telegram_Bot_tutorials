@@ -12,6 +12,7 @@ $ python setup.py install
 
 <details>
 <summary><b>View in CMD console: </b></summary>
+
 ```
 $ python setup.py install
 running install
@@ -232,4 +233,26 @@ Using c:\users\abhijit\anaconda3\lib\site-packages
 Finished processing dependencies for botogram2==0.6.1
 
 ```
+
 </details>
+
+## Testing
+* Successfully tested
+```console
+$ python bot.py
+19:47.02 -   INFO    - Your bot is now running!
+19:47.02 -   INFO    - Press Ctrl+C to exit.
+19:51.04 -   INFO    - Shutting down the runner...
+```
+* With error
+```console
+$ python bot.py
+Traceback (most recent call last):
+  File "bot.py", line 23, in <module>
+    @bot.command("deposit")
+  File "C:\Users\abhijit\Anaconda3\lib\site-packages\botogram\bot.py", line 195, in __
+    order=order, _from_main=True)
+  File "C:\Users\abhijit\Anaconda3\lib\site-packages\botogram\components.py", line 126, in add_command
+    raise NameError("The command /%s already exists" % name)
+NameError: The command /deposit already exists
+```
