@@ -1,3 +1,13 @@
+"""
+    Demo
+    ====
+
+    user: 
+        /hello
+    bot: 
+        What's up bitch
+"""
+
 import botogram
 from input import *
 
