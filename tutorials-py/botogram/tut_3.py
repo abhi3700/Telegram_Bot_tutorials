@@ -8,7 +8,7 @@
         /withdraw sdf 1.0000 EOS
     bot: 
         arg0: sdf
-        arg: 1.0000
+        arg1: 1.0000
         arg2: EOS
 """
 
