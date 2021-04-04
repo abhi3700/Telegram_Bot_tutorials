@@ -29,7 +29,8 @@ remote: -----> Python app detected
 remote:  !     Python has released a security update! Please consider upgrading to python-3.6.9
 remote:        Learn More: https://devcenter.heroku.com/articles/python-runtimes
 ```
-* New apps come with latest python version available in Heroku. For using specific version (say old), one can use this technique.
+* New apps come with latest python version available in Heroku. For using specific version (say old), one can use this technique using `heroku-cli` or in deploy tab of bot in heroku dashboard.
+* Look at the supported python versions on Heroku [here](https://devcenter.heroku.com/articles/python-support#supported-runtimes)
 
 ## App
 * create a new App using Heroku dashboard [RECOMMENDED]. Or else, one can create App via CLI. Go to the last part in [this](https://devcenter.heroku.com/articles/heroku-cli#getting-started)
@@ -41,11 +42,17 @@ remote:        Learn More: https://devcenter.heroku.com/articles/python-runtimes
 botogram2
 requests
 ```
-* __Procedure__ (The bot's repo is maintained with git in Heroku server)
-	- Ensure heroku is logged in in the CLI.
-	- After creating app, copy the link `Heroku Git URL` from App's settings page.
-	- Run `$ git remote add heroku <heroku-git-url>` from inside the Bot repo.
-	- After commits, run `$ git push heroku master` to push the repo into the heroku server.
+* __Procedure__ 
+	- M-1: The bot's repo is maintained with git in Heroku server. Here, one can maintain the repo in Heroku only or else both in Github & Heroku.
+		+ Ensure heroku is logged in in the CLI.
+		+ After creating app, copy the link `Heroku Git URL` from App's settings page.
+		+ Run `$ git remote add heroku <heroku-git-url>` from inside the Bot repo.
+		+ After commits, run `$ git push heroku master` to push the repo into the heroku server.
+	- M-2: The bot's repo is updated with git in Github. Just link it.
+		+ Open the bot page in heroku dashboard.
+		+ Go to it's deploy tab: https://dashboard.heroku.com/apps/tipuserbot/deploy/github
+		+ Enable deploy as 'automatic' to automatically push whenever pushed to Github using `git push origin master` Be sure that this branch in GitHub is always in a deployable state and any tests have passed before you push. 
+		+ NOTE: deploy the repo branch which is stable.
 
 ## Activity
 * following activities are shown
