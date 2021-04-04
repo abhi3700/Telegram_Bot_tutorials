@@ -33,6 +33,10 @@ remote:        Learn More: https://devcenter.heroku.com/articles/python-runtimes
 * Look at the supported python versions on Heroku [here](https://devcenter.heroku.com/articles/python-support#supported-runtimes)
 
 ## App
+* Files needed for a repo:
+	- "requirements.txt": all the packages
+	- "runtime.txt": python version
+	- "Procfile": web, worker
 * create a new App using Heroku dashboard [RECOMMENDED]. Or else, one can create App via CLI. Go to the last part in [this](https://devcenter.heroku.com/articles/heroku-cli#getting-started)
 > NOTE: Keep the App name same as the repo (git, heroku)
 * __Procfile__: Heroku apps include a Procfile that specifies the commands that are executed by the app on startup.
