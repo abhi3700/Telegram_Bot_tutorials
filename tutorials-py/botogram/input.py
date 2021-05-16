@@ -1,1 +1,2 @@
-API_key = "885410871:AAHb_lwnzFQ2jci_6W_NVgJSUSAUQN_skns"
+API_key = "1899126473:AAGK2wAaa5Uj1CiIhaQHjpxnJCPS6aT4vwQ"
+# bot username - testium_bot
