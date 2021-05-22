@@ -1,7 +1,9 @@
 # python-telegram-bot
 
 ## Background
-The Bot API is exposed via the telegram.Bot class. The methods are the snake_case equivalents of the methods described in the official Telegram Bot API. The exact camelCase method names as in the Telegram docs are also available for your convenience. So for example `telegram.Bot.send_message` is the same as `telegram.Bot.sendMessage`. All the classes of the Bot API can also be found in the `telegram` module, e.g. the `Message` class is available as `telegram.Message`.
+* The Bot API is exposed via the telegram.Bot class. The methods are the snake_case equivalents of the methods described in the official Telegram Bot API. The exact camelCase method names as in the Telegram docs are also available for your convenience. So for example `telegram.Bot.send_message` is the same as `telegram.Bot.sendMessage`. All the classes of the Bot API can also be found in the `telegram` module, e.g. the `Message` class is available as `telegram.Message`.
+* `getMe` is same as `get_me` and `sendMessage` to `send_message`.
+
 
 ## Tutorials
 * [ ] Send message to the user

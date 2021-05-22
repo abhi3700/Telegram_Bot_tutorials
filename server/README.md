@@ -81,8 +81,7 @@ requests
 		```
 * Capture `REDIS_URL` by following this:
 ```console
-abhijit@Abhijit MINGW64 /i/heroku_repos/keyhubbot (master)
-$ heroku config | grep REDIS
+$ heroku redis:credentials REDIS_URL -a keyhubbot
 REDIS_URL: redis://h:p478e373c898b3eb564e2a14303db09c415cfcacffa638404d3378e2ffb@ec2-3-222-131-127.compute-1.amazonaws.com:13819
 ```
 * Implement in the code by following [here](https://devcenter.heroku.com/articles/heroku-redis#connecting-in-python)
