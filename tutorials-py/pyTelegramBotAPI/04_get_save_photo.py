@@ -1,8 +1,10 @@
 '''
 	About
 	=====
-	Get photo file id & then save it to Redis DB
+	- Get photo file id & then save it to Redis DB
+	- Show image from Redis DB
 
+	NOTE: All the image is saved as 'base64' encoded & then to show the image, just decode it back as 'base64'
 '''
 import telebot
 import redis
@@ -50,7 +52,7 @@ def receive_photo(message):
 			# encode the image as 'base64' encoding type
 			img_encoded = base64.b64encode(open(f"img_{message.caption}_{message.chat.id}.jpg", "rb").read())
 			r.set(f"{message.caption}", img_encoded)
-			bot.reply_to(message, f"Photo saved in {type(img_encoded)} to Redis DB.")
+			bot.reply_to(message, f"Photo saved to Redis DB.")
 
 		except (redis.exceptions.ConnectionError):
 			bot.send_message(message.chat.id, "Sorry! Redis connection error!")
@@ -65,15 +67,18 @@ def receive_photo(message):
 @bot.message_handler(commands=["showf"])
 def show_photo(message):
 	try:
-		img_data = r.get("kycdocf")			# get the 'base64' encoded image data
-		with open(f"img_showf_{message.chat.id}.jpg", "wb") as fh:
-			# decode the image as 'base64' encoding type & then write
-			fh.write(base64.b64decode(img_data))			
-		
-		with open(f"img_showf_{message.chat.id}.jpg", 'rb') as photo:
-			bot.send_photo(message.chat.id, photo)
-		
-		os.remove(f"img_showf_{message.chat.id}.jpg")		# delete the file after use
+		if ("kycdocf").encode('utf-8') in r.keys():
+			img_data = r.get("kycdocf")			# get the 'base64' encoded image data
+			with open(f"img_showf_{message.chat.id}.jpg", "wb") as fh:
+				# decode the image as 'base64' encoding type & then write
+				fh.write(base64.b64decode(img_data))			
+			
+			with open(f"img_showf_{message.chat.id}.jpg", 'rb') as photo:
+				bot.send_photo(message.chat.id, photo)
+			
+			os.remove(f"img_showf_{message.chat.id}.jpg")		# delete the file after use
+		else:
+			bot.reply_to(message, "There is no image for kycdocf")
 
 	except (redis.exceptions.ConnectionError):
 		bot.send_message(message.chat.id, "Sorry! Redis connection error!")
@@ -82,15 +87,18 @@ def show_photo(message):
 @bot.message_handler(commands=["showb"])
 def show_photo(message):
 	try:
-		img_data = r.get("kycdocb")			# get the 'base64' encoded image data
-		with open(f"img_showb_{message.chat.id}.jpg", "wb") as fh:
-			# decode the image as 'base64' encoding type & then write
-			fh.write(base64.b64decode(img_data))			
-		
-		with open(f"img_showb_{message.chat.id}.jpg", 'rb') as photo:
-			bot.send_photo(message.chat.id, photo)
-		
-		os.remove(f"img_showb_{message.chat.id}.jpg")		# delete the file after use
+		if ("kycdocb").encode('utf-8') in r.keys():
+			img_data = r.get("kycdocb")			# get the 'base64' encoded image data
+			with open(f"img_showb_{message.chat.id}.jpg", "wb") as fh:
+				# decode the image as 'base64' encoding type & then write
+				fh.write(base64.b64decode(img_data))			
+			
+			with open(f"img_showb_{message.chat.id}.jpg", 'rb') as photo:
+				bot.send_photo(message.chat.id, photo)
+			
+			os.remove(f"img_showb_{message.chat.id}.jpg")		# delete the file after use
+		else:
+			bot.reply_to(message, "There is no image for kycdocb")
 
 	except (redis.exceptions.ConnectionError):
 		bot.send_message(message.chat.id, "Sorry! Redis connection error!")
@@ -99,15 +107,18 @@ def show_photo(message):
 @bot.message_handler(commands=["shows"])
 def show_photo(message):
 	try:
-		img_data = r.get("selfie")			# get the 'base64' encoded image data
-		with open(f"img_shows_{message.chat.id}.jpg", "wb") as fh:
-			# decode the image as 'base64' encoding type & then write
-			fh.write(base64.b64decode(img_data))			
-		
-		with open(f"img_shows_{message.chat.id}.jpg", 'rb') as photo:
-			bot.send_photo(message.chat.id, photo)
-		
-		os.remove(f"img_shows_{message.chat.id}.jpg")		# delete the file after use
+		if ("selfie").encode('utf-8') in r.keys():
+			img_data = r.get("selfie");			# get the 'base64' encoded image data
+			with open(f"img_shows_{message.chat.id}.jpg", "wb") as fh:
+				# decode the image as 'base64' encoding type & then write
+				fh.write(base64.b64decode(img_data))			
+			
+			with open(f"img_shows_{message.chat.id}.jpg", 'rb') as photo:
+				bot.send_photo(message.chat.id, photo)
+			
+			os.remove(f"img_shows_{message.chat.id}.jpg")		# delete the file after use
+		else:
+			bot.reply_to(message, "There is no image for selfie")
 
 	except (redis.exceptions.ConnectionError):
 		bot.send_message(message.chat.id, "Sorry! Redis connection error!")

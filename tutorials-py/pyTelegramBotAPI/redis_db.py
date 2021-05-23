@@ -22,3 +22,4 @@ r = redis.from_url(REDIS_URL, ssl_cert_reqs=None)		# ssl_verify to false
 # ---------------get data-----------------------------------------
 print(r.keys())
 print(r.get("kycdocf"))
+print(r.dbsize())
