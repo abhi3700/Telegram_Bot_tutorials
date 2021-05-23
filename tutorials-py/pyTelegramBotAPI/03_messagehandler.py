@@ -30,7 +30,7 @@ bot.owner = "@abhi3700"
 SOME_FANCY_EMOJI = b'\xf0\x9f\x98\x82'
 
 
-# # --------------------------------------------------------------------
+# --------------------------------------------------------------------
 # Handles all text messages that contains the commands '/start' or '/help'.
 @bot.message_handler(commands=['start', 'help'])
 def handle_start_help(message):
@@ -38,7 +38,7 @@ def handle_start_help(message):
 
 
 # --------------------------------------------------------------------
-Handles all sent text, document, audio, photo  files
+# Handles all sent text, document, audio, photo  files
 @bot.message_handler(content_types=['text', 'document', 'audio', 'photo'])
 def handle_text_doc_audio_photo_other(message):
 	if message.text:
@@ -59,7 +59,7 @@ def handle_text_doc_audio_photo_other(message):
 def handle_message(message):
     bot.reply_to(message, "\'kycdocf\' detected")
 
-# # --------------------------------------------------------------------
+# --------------------------------------------------------------------
 # Handles all messages for which the lambda returns True
 @bot.message_handler(func=lambda message: message.document.mime_type == 'text/plain', content_types=['document'])
 def handle_text_doc(message):

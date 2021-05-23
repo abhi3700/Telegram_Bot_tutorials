@@ -14,8 +14,11 @@ from input import REDIS_URL
 # define Redis database
 r = redis.from_url(REDIS_URL, ssl_cert_reqs=None)		# ssl_verify to false
 
+# connection status
+
 # ---------------set data-----------------------------------------
 
 
 # ---------------get data-----------------------------------------
 print(r.keys())
+print(r.get("kycdocf"))
