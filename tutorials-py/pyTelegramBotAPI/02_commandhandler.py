@@ -8,6 +8,12 @@
 	Features
 	--------
 	* A function which is decorated by a message handler can have an arbitrary name, however, it must have only one parameter (the message).
+	
+	Example images
+	==============
+	- reply_to_command.jpg
+	- reply_to_txt_msg.jpg
+
 '''
 import telebot
 from input import *
@@ -27,4 +33,5 @@ def send_welcome(message):
 def echo_all(message):
 	bot.reply_to(message, message.text)
 
-bot.polling()
+# bot.polling(none_stop= True)			# for Production
+bot.polling()							# for DEBUG

@@ -4,13 +4,17 @@
 	- Get photo file id & then save it to Redis DB
 	- Show image from Redis DB
 
+	Example images
+	==============
+	- read_photo_save_to_DB.jpg
+	- show_img_from_DB.jpg
+
 	NOTE: All the image is saved as 'base64' encoded & then to show the image, just decode it back as 'base64'
 '''
 import telebot
 import redis
 import os
 import base64
-from PIL import Image
 
 from input import *
 
@@ -124,4 +128,5 @@ def show_photo(message):
 		bot.send_message(message.chat.id, "Sorry! Redis connection error!")
 
 # --------------------------------------------------------------------
-bot.polling()
+# bot.polling(none_stop= True)			# for Production
+bot.polling()							# for DEBUG

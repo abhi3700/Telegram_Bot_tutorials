@@ -15,6 +15,15 @@
 		bot.reply_to(message, "This is a message handler")
 	```
 
+	Example images
+	==============
+	- audio_detect.jpg
+	- doc_detect_1.jpg
+	- doc_detect_2.jpg
+	- emoji_detection.jpg
+	- photo_detect.jpg
+	- regex_text_detect.jpg
+
 	> NOTE: Important: all handlers are tested in the order in which they were declared
 '''
 import telebot
@@ -84,4 +93,5 @@ def handle_text_doc(message):
 def send_something(message):
     bot.reply_to(message, "hello command or emoji msg detected.")
 # --------------------------------------------------------------------
-bot.polling()
+# bot.polling(none_stop= True)			# for Production
+bot.polling()							# for DEBUG
