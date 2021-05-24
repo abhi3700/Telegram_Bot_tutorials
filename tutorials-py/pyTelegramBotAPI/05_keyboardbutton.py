@@ -1,6 +1,7 @@
 '''
 	About
 	=====
+	- inline keyboard button
 
 	References
 	==========
@@ -8,6 +9,7 @@
 
 	Example images
 	==============
+	- inlinekeyboardbutton.mp4
 '''
 import telebot
 from telebot import util,types
@@ -19,7 +21,6 @@ bot= telebot.TeleBot(token= API_key, parse_mode= None)			# You can set parse_mod
 bot.about = "This is a Test Bot."
 bot.owner = "@abhi3700"
 
-# --------------------------------------------------------------------
 
 # --------------------------------------------------------------------
 @bot.message_handler(commands=['start'])
