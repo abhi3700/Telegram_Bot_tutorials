@@ -25,6 +25,15 @@
 	- regex_text_detect.jpg
 
 	> NOTE: Important: all handlers are tested in the order in which they were declared
+	> - Don't define 2 messsage handlers for 2 different text messages. Just filter inside 1 message_handler
+
+	```
+	@bot.message_handler(content_types=['text'])
+	def handle_text(message):
+		if message.text.__contains__("kycname") or 
+			message.text.__contains__("kycaddr"):
+
+	```
 '''
 import telebot
 from input import *
