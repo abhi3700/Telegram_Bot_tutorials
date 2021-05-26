@@ -23,6 +23,7 @@
 	- emoji_detection.jpg
 	- photo_detect.jpg
 	- regex_text_detect.jpg
+	- args.jpg
 
 	> NOTE: Important: all handlers are tested in the order in which they were declared
 	> - Don't define 2 messsage handlers for 2 different text messages. Just filter inside 1 message_handler
@@ -54,10 +55,15 @@ SOME_FANCY_EMOJI = b'\xf0\x9f\x98\x82'
 def handle_start_help(message):
 	bot.reply_to(message, "Hey buddy!, how are you doing?\nMay I help you with anything?")
 
+# --------------------------------------------------------------------
+@bot.message_handler(commands=['args'])
+def show_args(message):
+	bot.reply_to(message, telebot.util.extract_arguments(message.text))
+
 
 # --------------------------------------------------------------------
 # Handles all sent text, document, audio, photo  files
-@bot.message_handler(content_types=['text', 'document', 'audio', 'photo'])
+@bot.message_handler(func=lambda message: not message.text.startswith("/"), content_types=['text', 'document', 'audio', 'photo'])
 def handle_text_doc_audio_photo_other(message):
 	if message.text:
 		bot.reply_to(message, f"text msg detected. and it\'s encoded message: {str(message.text.encode('utf-8'))}")
@@ -101,6 +107,8 @@ def handle_text_doc(message):
 @bot.message_handler(func=lambda msg: msg.text.encode("utf-8") == SOME_FANCY_EMOJI)
 def send_something(message):
     bot.reply_to(message, "hello command or emoji msg detected.")
+
+
 # --------------------------------------------------------------------
 # bot.polling(none_stop= True)			# for Production
 bot.polling()							# for DEBUG
