@@ -126,3 +126,16 @@ REDIS_URL:    redis://h:pd4a2fa90f5a63058400930ffd21f5864312b2a174061846e13543a7
 ## Troubleshooting
 * whenever the bot is deployed, and if doesn't work, then try to run `python app/bot.py` command on the heroku console in App's Home screen.
 * For testing purpose, always use local PC via `heroku local` command. Actually, in Heroku one gets limited usage in FREE membership.
+* Error:
+```console
+TypeError: __init__() got an unexpected keyword argument 'ssl_cert_reqs'
+```
+	- __Problem__:
+```python
+REDIS_URL = 'redis://:pfc8091ed64932400959fc244822069d0727e240e931d495e2c0b281f3ed3434c00@ec2-35-153-151-182.compute-1.amazonaws.com:1920'
+```
+	- __Solution__: Add security
+```python
+REDIS_URL = 'rediss://:pfc8091ed64932400959fc244822069d0727e240e931d495e2c0b281f3ed3434c00@ec2-35-153-151-182.compute-1.amazonaws.com:1920'
+r = redis.from_url(REDIS_URL, ssl_cert_reqs=None)		# ssl_verify to false
+```
