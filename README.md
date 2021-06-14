@@ -62,6 +62,24 @@ Learn how to make a telegram bot from basics to sample bots
   - https://github.com/livz/LizBot
 * [Article by a Toptal Engineer](https://www.toptal.com/python/telegram-bot-tutorial-python)
 
+
+## Tools
+* Emoji
+  - https://emojipedia.org/
+  - https://apps.timwhitlock.info/emoji/tables/unicode
+  - get bytes from unicode
+    - Just copy the emoji & literally paste into unicode place [here](https://onlineunicodetools.com/convert-unicode-to-bytes)
+    - get the bytes & write like this:
+```py
+person_emoji = b'\xf0\x9f\xa7\x8d'.decode('utf-8')      # U+1F9CD
+upload_emoji = b'\xF0\x9F\x94\xBC'.decode('utf-8')      # U+1F53C
+```
+  - usage
+```py
+itembtn0 = types.InlineKeyboardButton(f'{person_emoji} Account', callback_data = "home_account")
+itembtn1 = types.InlineKeyboardButton(f'{purse_emoji} Wallet', callback_data = "home_wallet")
+```
+
 * ### TODO:
   - `Quiz Bot`
     + owner can add set of quiz Q&A
