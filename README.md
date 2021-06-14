@@ -67,6 +67,7 @@ Learn how to make a telegram bot from basics to sample bots
 * Emoji
   - https://emojipedia.org/
   - https://apps.timwhitlock.info/emoji/tables/unicode
+  - Or Google the required type with 'emoji' as suffix. E.g. "person standing emoji", "cow emoji", etc.
   - get bytes from unicode
     - Just copy the emoji & literally paste into unicode place [here](https://onlineunicodetools.com/convert-unicode-to-bytes)
     - get the bytes & write like this:
