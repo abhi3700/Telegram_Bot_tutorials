@@ -69,11 +69,12 @@ Learn how to make a telegram bot from basics to sample bots
   - https://apps.timwhitlock.info/emoji/tables/unicode
   - Or Google the required type with 'emoji' as suffix. E.g. "person standing emoji", "cow emoji", etc.
   - get bytes from unicode
-    - Just copy the emoji & literally paste into unicode place [here](https://onlineunicodetools.com/convert-unicode-to-bytes)
+    - M-1: Just copy the emoji & literally paste into unicode place [here](https://onlineunicodetools.com/convert-unicode-to-bytes)
+    - M-2: Just copy the emoji & literally paste into the variable place inside the `.py` file
     - get the bytes & write like this:
 ```py
-person_emoji = b'\xf0\x9f\xa7\x8d'.decode('utf-8')      # U+1F9CD
-upload_emoji = b'\xF0\x9F\x94\xBC'.decode('utf-8')      # U+1F53C
+person_emoji = '👤'              # b'\xf0\x9f\x91\xa4'.decode('utf-8') U+1F464
+purse_emoji = '👛'             # b'\xf0\x9f\x91\x9b'.decode('utf-8') U+1F519
 ```
   - usage
 ```py
