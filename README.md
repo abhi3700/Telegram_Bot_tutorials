@@ -94,3 +94,5 @@ itembtn1 = types.InlineKeyboardButton(f'{purse_emoji} Wallet', callback_data = "
     + Earning: user subscription for 
       - specific price value alert for a share. E.g. alert when share price of Google reaches 1000 USD.
       - specific price of share daily e.g. Google, Uber, Amazon... 
+  - `FlashLoan Helper`: Develop a bot which would list down the price difference of same pairs across different DEXes. The objective is to then make a flash loan transaction using a NodeJS/Python script in order to replicate this:
+![DeFi Lecture 1_ Introduction and Overview of DeFi 32-42 screenshot](https://user-images.githubusercontent.com/16472948/164302715-88987eab-333c-4c27-8937-69e61216188b.png)
