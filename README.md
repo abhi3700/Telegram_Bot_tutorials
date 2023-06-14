@@ -20,7 +20,9 @@ Learn how to make a telegram bot from basics to production
   - [x] Python
 - [ ] Add bot to a group
 - [ ] Reply to any comment on a group
-  > It is identical to the feature "Comment to any comment on channel's post"
+  > It is identical to the feature "Reply to any comment on channel's post"
+  - [ ] Rust
+    - [Reference](https://github.com/teloxide/teloxide/discussions/886)
 - [ ] Verify a bot/human: by sending DM to that user & check for clicking a button
   - [ ] DM
   - [ ] Group
