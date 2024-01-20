@@ -29,12 +29,45 @@ Learn how to make a telegram bot from basics to production
 - [ ] Create a UI with back button, options like an App
   - [x] Python
 
+### Conversation
+
+There are 5 ways to do a conversation with the bot in order to make them interactive:
+
+1. Commands with parameters like `/pay 1000 @user1`
+2. Dialogue with the bot like
+
+```
+User: /pay
+Bot: Please enter the amount
+User: 1000
+Bot: Please enter the receiver's username
+User: @user1
+Bot: Done! Here is the transaction ID: 123456789
+```
+
+3. Inline keyboard
+
+```
+User: /pay
+Bot: [Receive] [Send]
+User: Clicked on [Receive] button
+Bot: Please enter the amount
+User: 1000
+Bot: Done! Here is the transaction ID: 123456789
+```
+
+4. Reply keyboard
+   - Works like inline keyboard but with a different UI coming from bottom of the screen. Mostly used for less options like Yes/No, etc.
+5. Open a Web App/Page & let the user interact with it
+   1. Put the link in the bot's message
+   2. Put the link in the bot's inline keyboard
+
 ## Programming
 
 ### Rust
 
 - [my rust tutorials](https://github.com/abhi3700/My_Learning-Rust/tree/main/libs/teloxide)
-- Teloxide: https://github.com/teloxide/teloxide
+- Teloxide: <https://github.com/teloxide/teloxide>
 
 ### Python
 
@@ -58,39 +91,39 @@ Learn how to make a telegram bot from basics to production
 ### C++
 
 - [my cpp tutorials](./tutorials-cpp)
-- C++ lib for Bot - https://github.com/reo7sp/tgbot-cpp
-- Telegram Bot API - https://github.com/desmoteo/telegram-bot-api [DEPRECATED]
+- C++ lib for Bot - <https://github.com/reo7sp/tgbot-cpp>
+- Telegram Bot API - <https://github.com/desmoteo/telegram-bot-api> [DEPRECATED]
 
 ## Learning/Education
 
-- Bots: An introduction for developers - https://core.telegram.org/bots
-- Telegram Bot API - https://core.telegram.org/bots/api
-- Sample examples - https://core.telegram.org/bots/samples#python
-- **THEORY** - https://github.com/python-telegram-bot/python-telegram-bot/wiki
-- How to create a Telegram Bot with Node.js - https://www.youtube.com/watch?v=Te7HcRhwOI4
+- Bots: An introduction for developers - <https://core.telegram.org/bots>
+- Telegram Bot API - <https://core.telegram.org/bots/api>
+- Sample examples - <https://core.telegram.org/bots/samples#python>
+- **THEORY** - <https://github.com/python-telegram-bot/python-telegram-bot/wiki>
+- How to create a Telegram Bot with Node.js - <https://www.youtube.com/watch?v=Te7HcRhwOI4>
 
 ## Github Repositories
 
-- Bot with Google App Engine (GAP) - https://github.com/yukuku/telebot
-- Collection great groups, channels, bots and libraries for Telegram - https://github.com/ebertti/awesome-telegram
-- Collection of Bots - https://github.com/DenisIzmaylov/awesome-telegram-bots
+- Bot with Google App Engine (GAP) - <https://github.com/yukuku/telebot>
+- Collection great groups, channels, bots and libraries for Telegram - <https://github.com/ebertti/awesome-telegram>
+- Collection of Bots - <https://github.com/DenisIzmaylov/awesome-telegram-bots>
 
 ## Bots
 
-- Weather Bot using JS - https://www.3scale.net/2016/02/create-a-weather-bot-for-telegram/
-- Bot with Amazon AWS cloud - https://lesterchan.net/blog/2016/03/11/telegram-bot-using-aws-api-gateway-and-aws-lambda/
+- Weather Bot using JS - <https://www.3scale.net/2016/02/create-a-weather-bot-for-telegram/>
+- Bot with Amazon AWS cloud - <https://lesterchan.net/blog/2016/03/11/telegram-bot-using-aws-api-gateway-and-aws-lambda/>
 - Bot with GAE -
-  - https://github.com/FollonSaxBass/python-telegram-bot-GAE
-  - https://github.com/yukuku/telebot
-  - https://github.com/livz/LizBot
+  - <https://github.com/FollonSaxBass/python-telegram-bot-GAE>
+  - <https://github.com/yukuku/telebot>
+  - <https://github.com/livz/LizBot>
 - [Article by a Toptal Engineer](https://www.toptal.com/python/telegram-bot-tutorial-python)
 
 ## Tools
 
 - Emoji
 
-  - https://emojipedia.org/
-  - https://apps.timwhitlock.info/emoji/tables/unicode
+  - <https://emojipedia.org/>
+  - <https://apps.timwhitlock.info/emoji/tables/unicode>
   - Or Google the required type with 'emoji' as suffix. E.g. "person standing emoji", "cow emoji", etc.
   - get bytes from unicode
     - M-1: Just copy the emoji & literally paste into unicode place [here](https://onlineunicodetools.com/convert-unicode-to-bytes)
@@ -102,14 +135,14 @@ Learn how to make a telegram bot from basics to production
   purse_emoji = '👛'             # b'\xf0\x9f\x91\x9b'.decode('utf-8') U+1F519
   ```
 
-  - Usage
+- Usage
 
   ```py
   itembtn0 = types.InlineKeyboardButton(f'{person_emoji} Account', callback_data = "home_account")
   itembtn1 = types.InlineKeyboardButton(f'{purse_emoji} Wallet', callback_data = "home_wallet")
   ```
 
-### TODO:
+### TODO
 
 - `Quiz Bot`
   - owner can add set of quiz Q&A
@@ -117,8 +150,8 @@ Learn how to make a telegram bot from basics to production
 - `Birthday_bot`: reminds other users (in a group) about the Birthday boy/girl.
 - `Weather_bot`: gives alert about weather of a place (given by user).
 - `Stock_bot`: gives all stock market info
-  - API: https://mboum.com/api/welcome
-  - Features inspiration: https://mboum.com/
+  - API: <https://mboum.com/api/welcome>
+  - Features inspiration: <https://mboum.com/>
   - Earning: user subscription for
     - specific price value alert for a share. E.g. alert when share price of Google reaches 1000 USD.
     - specific price of share daily e.g. Google, Uber, Amazon...
