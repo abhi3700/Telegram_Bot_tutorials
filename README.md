@@ -49,11 +49,9 @@ Bot: Done! Here is the transaction ID: 123456789
 
 ```
 User: /pay
-Bot: [Receive] [Send]
-User: Clicked on [Receive] button
-Bot: Please enter the amount
-User: 1000
-Bot: Done! Here is the transaction ID: 123456789
+Bot: [Yes][No]
+User: Clicked on [Yes] button
+Bot: Done!
 ```
 
 4. Reply keyboard
