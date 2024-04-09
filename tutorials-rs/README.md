@@ -199,6 +199,7 @@ pub(crate) fn kb_test() -> KeyboardMarkup {
 - [teloxide](https://github.com/teloxide/teloxide)
 - [tgbot: A full-featured Telegram Bot API client](https://github.com/tg-rs/tgbot)
 - [⚡rustygram is a minimal and blazing fast telegram notification framework for Rust](https://github.com/ExtremelySunnyYK/rustygram)
+- [telers]<https://github.com/Desiders/telers> supports till latest Telegram Bot API (7.2 atm).
 
 ### Bots
 
