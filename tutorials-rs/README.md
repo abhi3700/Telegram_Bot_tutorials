@@ -208,3 +208,8 @@ pub(crate) fn kb_test() -> KeyboardMarkup {
 - [A Telegram ChatGPT bot written in Rust](https://github.com/flows-network/telegram-gpt)
 
 For more, click [here](https://github.com/topics/telegram-bot?l=rust&o=desc&s=updated)
+
+### Blogs
+
+- [Migrating my family finance bot from Python to Rust (teloxide) because I am tired of exceptions (part 1)](https://trkohler.com/posts/i-migrated-my-family-finance-bot-from-python-to-rust-because-i-am-tired-of-exceptions/)
+- [Migrating my family finance bot from Python to Rust (teloxide) [part 2]](https://trkohler.com/posts/migrating-my-family-finance-bot-from-python-to-rust-teloxide-part-2/)
