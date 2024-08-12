@@ -40,6 +40,19 @@ pub(crate) async fn operator_command(bot: Bot, msg: Message) -> HandlerResult {
 }
 ```
 
+- Get user id from `Message` type in private/group chats:
+
+```rust
+pub(crate) async fn tg_uid(bot: Bot, msg: Message) -> HandlerResult {
+  let uid = msg.chat.id.0; // [RECOMMENDED for personal chats]
+  // let uid = msg.from().unwrap().id.0; [used in group chats as the last message sent by whoever]
+ bot.send_message(msg.chat.id, format!("Your username is {}", msg.from().unwrap().id.0))
+    .await?;
+
+ Ok(())
+}
+```
+
 ### Chat, Message
 
 - <u>Message</u>: When a user sends a message to the bot, a `Message` type is sent. This means that we can have a function that takes argument-type param like this:
