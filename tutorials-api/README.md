@@ -3,11 +3,19 @@
 ## Resources
 
 ## Coding
-NOTE: not case-sensitive i.e. getMe or getme
-- Check status of Bot: https://api.telegram.org/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/getupdates
+
+> NOTE: not case-sensitive i.e. getMe or getme
+
+- Check status of Bot: <https://api.telegram.org/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/getUpdates>
+
 ```json
-{"ok":true,"result":[]}
+{
+  "ok":true,
+  "result":[]
+}
 ```
+
+Now, you can send a message to the TG bot from chat. And when you reload the page, you get 1st element in `result` array.
 
 > NOTE: to get the updates run it from 1 server at a time. Just close the terminal (if running an instance there), cloud. Then the above url would give response like this:
 
@@ -154,15 +162,30 @@ NOTE: not case-sensitive i.e. getMe or getme
 
 </details>>
 
+- About Bot: <https://api.telegram.org/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/getMe>
 
-- About Bot: https://api.telegram.org/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/getMe
 ```json
 {"ok":true,"result":{"id":1893739737,"is_bot":true,"first_name":"KYC via Blockchain","username":"kyconbc_bot","can_join_groups":true,"can_read_all_group_messages":false,"supports_inline_queries":false}}
 ```
-- Bot send text message to a user: https://api.telegram.org/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/sendmessage?chat_id=410894301&text=hello
+
+- Bot send text message to a user: <https://api.telegram.org/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/sendmessage?chat_id=410894301&text=hello>
+  - via `curl`:
+
+  ```sh
+  curl -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" -H "Content-Type: application/json" -d @body.json
+  ```
+
+  where `body.json` is a file with content:
+
+  ```json
+  "chat_id": 24325425425,
+  "text": "Hey this is a notification from bot.",
+  ```
 
 ### File download
-- Get the photos the Bot received here: https://api.telegram.org/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/getupdates
+
+- Get the photos the Bot received here: <https://api.telegram.org/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/getupdates>
+
 <details>
 <summary><b>Expand: </b></summary>
 
@@ -229,9 +252,10 @@ NOTE: not case-sensitive i.e. getMe or getme
 }
 ```
 
-</details>>
+</details>
 
-- Get the `file_path` from `file_id` by selecting `small_file_id`: https://api.telegram.org/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/getfile?file_id=AgACAgUAAxkBAAICkmCkK_7IbV8esuN4vYTT1jToIuJoAAIsrDEbHBYhVbYvqKYWFMRnnMwlbXQAAwEAAwIAA20AA9vlBQABHwQ
+- Get the `file_path` from `file_id` by selecting `small_file_id`: <https://api.telegram.org/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/getfile?file_id=AgACAgUAAxkBAAICkmCkK_7IbV8esuN4vYTT1jToIuJoAAIsrDEbHBYhVbYvqKYWFMRnnMwlbXQAAwEAAwIAA20AA9vlBQABHwQ>
+
 ```json
 {
   "ok": true,
@@ -243,4 +267,5 @@ NOTE: not case-sensitive i.e. getMe or getme
   }
 }
 ```
-- Now, Download the file like this: https://api.telegram.org/file/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/profile_photos/file_1.jpg For more, refer [here](https://core.telegram.org/bots/api#getfile)
+
+- Now, Download the file like this: <https://api.telegram.org/file/bot1893739737:AAGAVoUXZ-OB27iYvy9HyyvErtkoDbqB1RA/profile_photos/file_1.jpg> For more, refer [here](https://core.telegram.org/bots/api#getfile)
