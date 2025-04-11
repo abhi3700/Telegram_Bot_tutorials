@@ -204,12 +204,54 @@ pub(crate) fn kb_test() -> KeyboardMarkup {
   > Cons: Here, once the storage state is set like `Start`, `ReceiveName`, then it is not possible to change the name. This can be renamed only after deleting the bot or may be try with revoking the current API key with a new one.
 
 - If we have 2 dialogue states for multiple commands (/foo, /bar), then we have to club them into global state for the dialogue. It is done in this example: [subspace-telegram-bot](https://github.com/abhi3700/subspace-telegram-bot), view commit changes in [PR #3](https://github.com/abhi3700/subspace-telegram-bot/pull/3/commits/33762c7fdd9477821d98c73086ede68c18a1aefe) of the repo.
+- Suppose, you have to accept title, desc, photos. Then, the dialogue state become like this:
+
+```rust
+pub(crate) enum SupportIssueState {
+  #[default]
+  ReceiveTitle,
+  ReceiveDesc {
+    title: String,
+    tries: u8,
+  },
+  ReceivePhotos {
+    title: String,
+    desc: String,
+  },
+  ReceiveOtpConfirmation {
+    title: String,
+    desc: String,
+    photos: Vec<String>,
+    tries: u8,
+  },
+}
+```
+
+And the function for receive desc is like this:
+
+```rust
+
+pub(crate) async fn issue_receive_desc(
+  bot: Bot,
+  dialogue: GlobalDialogue,
+  // Available from `SupportIssueState::ReceiveDesc {title, tries}`
+  (title, tries): (String, u8),
+  msg: Message,
+  ) -> HandlerResult<()> {
+  ..
+```
+
+> NOTE: Here, the previous arguments to be saved in dialogue are in tuples.
 
 ## References
 
 ### Libs
 
 - [teloxide](https://github.com/teloxide/teloxide)
+  - <https://github.com/LasterAlex/teloxide_tests>
+    - <https://github.com/LasterAlex/teloxide_tests/tree/master/examples>
+      - Album bot
+      - ..
 - [tgbot: A full-featured Telegram Bot API client](https://github.com/tg-rs/tgbot)
 - [⚡rustygram is a minimal and blazing fast telegram notification framework for Rust](https://github.com/ExtremelySunnyYK/rustygram)
 - [telers]<https://github.com/Desiders/telers> supports till latest Telegram Bot API (7.2 atm).
